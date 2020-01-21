@@ -1,0 +1,23 @@
+{% extends 'proxymox_web_ui/index.html' %}
+
+{% block content %}
+
+<div>
+    <h2>login</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="host">host:</label>
+            <input id="host" type="text" name="host">
+        </div>
+
+        <div>
+            <label for="password">password:</label>
+            <input id="password" type="text" name="password">
+        </div>
+
+        <input type="submit" value="Run">
+    </form>
+</div>
+
+{% endblock %}

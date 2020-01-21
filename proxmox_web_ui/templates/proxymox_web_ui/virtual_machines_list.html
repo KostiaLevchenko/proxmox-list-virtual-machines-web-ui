@@ -1,0 +1,31 @@
+{% extends 'proxymox_web_ui/index.html' %}
+
+{% block content %}
+
+<div>
+    <h1>Virtual machines list:</h1>
+    <ol>
+        {% for machine in machines %}
+            <li>
+                <h2>{{ machine.node }}</h2>
+                <ul>
+{#                    <li>name: {{ machine.node }}</li>#}
+                    <li>id: {{ machine.id }}</li>
+                    <li>maxcpu: {{ machine.maxcpu }}</li>
+                    <li>ssl_fingerprint: {{ machine.ssl_fingerprint }}</li>
+                    <li>cpu: {{ machine.cpu }}</li>
+                    <li>type: {{ machine.type }}</li>
+                    <li>maxdisk: {{ machine.maxdisk }}</li>
+                    <li>level: {{ machine.level }}</li>
+                    <li>maxmem: {{ machine.maxmem }}</li>
+                    <li>status: {{ machine.status }}</li>
+                    <li>uptime: {{ machine.uptime }}</li>
+                    <li>mem: {{ machine.mem }}</li>
+                    <li>disk: {{ machine.disk }}</li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ol>
+</div>
+
+{% endblock %}
