@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'proxmox_web_ui'
+    'proxmox_web_ui',
 ]
 
 MIDDLEWARE = [
